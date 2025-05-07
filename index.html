@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura Numérica - Juego Matemático</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>AVENTURA NUMÉRICA</h1>
+            <div class="game-stats">
+                <div class="stats-box">
+                    <span>Nivel</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="stats-box">
+                    <span>Puntos</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stats-box hearts">
+                    <span>❤️ ❤️ ❤️</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-board">
+            <div class="character-container">
+                <div class="character" id="hero"></div>
+                <div class="progress-bar">
+                    <div class="progress" id="level-progress"></div>
+                </div>
+            </div>
+
+            <div class="question-container" id="question-box">
+                <div class="question-display">
+                    <p id="question-text">¡Prepárate para jugar!</p>
+                </div>
+                <div class="answer-options">
+                    <button class="answer-btn" id="answer1">?</button>
+                    <button class="answer-btn" id="answer2">?</button>
+                    <button class="answer-btn" id="answer3">?</button>
+                    <button class="answer-btn" id="answer4">?</button>
+                </div>
+            </div>
+
+            <div class="powerups">
+                <button class="powerup-btn" id="powerup1">🎲 x2 Puntos</button>
+                <button class="powerup-btn" id="powerup2">⏱️ +10s</button>
+                <button class="powerup-btn" id="powerup3">💡 Ayuda</button>
+            </div>
+        </main>
+
+        <div class="game-controls">
+            <button id="start-btn" class="btn start-btn">COMENZAR AVENTURA</button>
+            <div class="timer-container">
+                <div class="timer-bar" id="timer"></div>
+            </div>
+        </div>
+
+        <div class="game-modal hidden" id="game-modal">
+            <div class="modal-content">
+                <h2 id="modal-title">¡Bien hecho!</h2>
+                <p id="modal-message">Has completado el nivel 1</p>
+                <button id="continue-btn" class="btn">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="correct-sound" src="assets/sounds/correct.mp3" preload="auto"></audio>
+    <audio id="wrong-sound" src="assets/sounds/wrong.mp3" preload="auto"></audio>
+    <audio id="levelup-sound" src="assets/sounds/levelup.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
